@@ -1,3 +1,19 @@
 <resources>
+    <string name="text_input_layout_width">383dp</string>
+    <string name="text_input_layout_height">48dp</string>
+    <string name="text_input_layout_marginTop">12dp</string>
     <string name="app_name">JobsCompare</string>
+    <string name="ajouter_une_nouvelle_offre">Ajouter une nouvelle offre</string>
+    <string name="entreprise">Entreprise</string>
+    <string name="entreprise_hint">ex : EDF</string>
+    <string name="poste">Poste</string>
+    <string name="poste_hint">ex : Data Engineer</string>
+    <string name="lienVersLOffre">Lien vers l offre</string>
+    <string name="lien_hint">ex : http://pole-emploi.fr/offres/180640</string>
+    <string name="typeCandidature">Type de candidature</string>
+    <string name="candidature_spontanee">Candidature spontanee</string>
+    <string name="offre_d_emploi">offre d emploi</string>
+    <string name="approche_reseau">approche reseau</string>
+    <string name="autre">autre</string>
+    <string name="valider">Valider</string>
 </resources>

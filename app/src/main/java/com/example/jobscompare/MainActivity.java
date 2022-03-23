@@ -22,4 +22,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
+    public void onRadioButtonClicked(View view) {
+    }
 }
