@@ -44,7 +44,7 @@
     <string name="link_offer">link</string>
     <string name="tel_image">tel</string>
     <string name="mail_image">mail</string>
-    <string name="ajouter_une_nouvelle_offre">Ajouter une nouvelle offre</string>
+    <string name="ajouter_une_nouvelle_offre">Informations</string>
     <string name="entreprise">Entreprise</string>
     <string name="entreprise_hint">ex : EDF</string>
     <string name="poste">Poste</string>
@@ -59,4 +59,5 @@
     <string name="valider">Valider</string>
     <string name="address_hint">ex : 22–30 av. de Wagram</string>
     <string name="logo_company">logo_company</string>
+    <string name="typeoffre">typeOffre</string>
 </resources>
