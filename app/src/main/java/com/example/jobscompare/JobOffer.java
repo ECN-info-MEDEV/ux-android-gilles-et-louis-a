@@ -29,18 +29,17 @@ public class JobOffer extends AppCompatActivity {
         TextView mText2 = (TextView) findViewById(R.id.text_poste);
         mText2.setText(text_poste);
 
-        //retrieving user input from NewOffer Activity
+        /*//retrieving user input from NewOffer Activity
         String link_input = Extra.getStringExtra("User_link_input");
         Log.i(TAG, "link_input : "+link_input);
         TextView mText3 = (TextView) findViewById(R.id.link_input);
-        mText3.setText(link_input);
+        mText3.setText(link_input);*/
 
-        /*//retrieving user input from NewOffer Activity
+        //retrieving user input from NewOffer Activity
         String address_input = Extra.getStringExtra("User_address_input");
         Log.i(TAG, "address_input : "+address_input);
         TextView mText4 = (TextView) findViewById(R.id.address_input);
-        mText4.setText(address_input);*/
-
+        mText4.setText(address_input);
 
     }
 
