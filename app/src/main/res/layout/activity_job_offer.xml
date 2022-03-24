@@ -120,7 +120,7 @@
                 android:layout_height="32dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/link_offer"
-                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/text_poste"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3"
                 app:srcCompat="@drawable/logo_chain" />
 
@@ -130,7 +130,7 @@
                 android:layout_height="32dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/linkedin_image"
-                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/text_poste"
                 app:layout_constraintTop_toBottomOf="@+id/imageView4"
                 app:srcCompat="@drawable/logo_linkedin" />
 
