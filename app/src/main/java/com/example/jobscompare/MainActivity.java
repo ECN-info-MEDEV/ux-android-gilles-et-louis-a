@@ -15,10 +15,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FloatingActionButton fab2 = findViewById(R.id.newOffer);
-        fab2.setOnClickListener(view -> {
+        FloatingActionButton actionButtonNewOffer = findViewById(R.id.newOffer);
+        actionButtonNewOffer.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this,
                     NewOffer.class);
+            startActivity(intent);
+        });
+
+        FloatingActionButton fab2 = findViewById(R.id.temp);
+        fab2.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this,
+                    JobOffer.class);
             startActivity(intent);
         });
     }
