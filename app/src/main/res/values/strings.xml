@@ -3,7 +3,6 @@
     <string name="text_input_layout_height">48dp</string>
     <string name="text_input_layout_marginTop">12dp</string>
     <string name="app_name">JobsCompare</string>
-    <string name="amazon_logo">amazon logo</string>
     <string name="visio">visio</string>
     <string name="company">Amazon</string>
     <string name="jobTitle">Data Engineer</string>
@@ -11,7 +10,7 @@
     <string name="joblink">link</string>
     <string name="prochain_v_nement">Prochain événement</string>
     <string name="date_prochain_evenement">22 avril</string>
-    <string name="nb_rtt">8</string>
+    <string name="nbre_rtt">8</string>
     <string name="titre_prochain_eve">Entretien #2</string>
     <string name="heure_eve_pro">14h30</string>
     <string name="conditions_de_l_offre">Conditions de l’offre</string>
@@ -36,7 +35,7 @@
     <string name="salaire"><![CDATA[Salaire :]]></string>
     <string name="salaire_value">45</string>
     <string name="k_an">k€/an</string>
-    <string name="descriptif_offre">Descriptif offre</string>
+    <string name="titre_descriptif_offre">Descriptif offre</string>
     <string name="chronologie">Chronologie</string>
     <string name="titre_chrono1">Candidature</string>
     <string name="mail">mail</string>
@@ -58,5 +57,6 @@
     <string name="approche_reseau">approche reseau</string>
     <string name="autre">autre</string>
     <string name="valider">Valider</string>
-    <string name="address_hint">ex : 22-30 av. de Wagram</string>
+    <string name="address_hint">ex : 22–30 av. de Wagram</string>
+    <string name="logo_company">logo_company</string>
 </resources>
