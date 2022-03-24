@@ -7,7 +7,7 @@
     <string name="company">Amazon</string>
     <string name="jobTitle">Data Engineer</string>
     <string name="adress">22–30 av. de Wagram\n75000, Paris</string>
-    <string name="joblink">link</string>
+    <string name="joblink">lien de l’offre</string>
     <string name="prochain_v_nement">Prochain événement</string>
     <string name="date_prochain_evenement">22 avril</string>
     <string name="nbre_rtt">8</string>
