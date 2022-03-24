@@ -21,13 +21,6 @@ public class MainActivity extends AppCompatActivity {
                     NewOffer.class);
             startActivity(intent);
         });
-
-        FloatingActionButton fab2 = findViewById(R.id.temp);
-        fab2.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this,
-                    JobOffer.class);
-            startActivity(intent);
-        });
     }
 
     public void onRadioButtonClicked(View view) {
