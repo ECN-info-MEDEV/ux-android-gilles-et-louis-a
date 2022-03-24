@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--    <item name="approche_reseau" type="id">approche_reseau</item>-->
-<!--    <item name="offre_d_emploi" type="id">offre_d_emploi</item>-->
-<!--    <item name="candidature_spontanee" type="id">candidature_spontanee</item>-->
-<!--    <item name="typeCandidatureRadio" type="id">typeCandidatureRadio</item>-->
+        <item name="poste_input" type="id"></item>
+    <item name="link_input" type="id"></item>
+    <item name="approche_reseau" type="id"></item>
+    <item name="offre_d_emploi" type="id"></item>
+    <item name="candidature_spontanee" type="id"></item>
+    <item name="typeCandidatureRadio" type="id"></item>
 </resources>

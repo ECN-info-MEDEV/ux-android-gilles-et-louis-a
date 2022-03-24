@@ -41,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/entreprise_hint"
+            android:inputType="textLongMessage"
             android:textColorHint="#616161"
             android:visibility="visible" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -66,9 +67,11 @@
         tools:layout_editor_absoluteX="1dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/poste_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/poste_hint"
+            android:inputType="textLongMessage"
             android:textColorHint="#616161"
             android:visibility="visible" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -94,9 +97,11 @@
         tools:layout_editor_absoluteX="1dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/link_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/lien_hint" />
+            android:hint="@string/lien_hint"
+            android:inputType="textLongMessage" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
