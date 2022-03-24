@@ -60,4 +60,5 @@
     <string name="address_hint">ex : 22–30 av. de Wagram</string>
     <string name="logo_company">logo_company</string>
     <string name="typeoffre">typeOffre</string>
+    <string name="adresse_de_l_entreprise">Adresse de l\'entreprise</string>
 </resources>
