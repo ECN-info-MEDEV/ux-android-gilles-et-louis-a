@@ -16,4 +16,5 @@
     <string name="approche_reseau">approche reseau</string>
     <string name="autre">autre</string>
     <string name="valider">Valider</string>
+    <string name="address_hint">ex : 22-30 av. de Wagram</string>
 </resources>

@@ -48,7 +48,7 @@ public class NewOffer extends AppCompatActivity {
                 //lines of code
                 Resources r = getResources();
                 String name = getPackageName();
-                List<String> ids_name = Arrays.asList("poste_input", "link_input");
+                List<String> ids_name = Arrays.asList("poste_input", "link_input");//, "address_input");
                 String name_placeholder;
                 for (String id_name : ids_name) {
                     //getting user input using the id of the text input

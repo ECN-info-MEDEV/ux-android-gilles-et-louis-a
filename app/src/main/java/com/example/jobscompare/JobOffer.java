@@ -35,6 +35,12 @@ public class JobOffer extends AppCompatActivity {
         TextView mText3 = (TextView) findViewById(R.id.link_input);
         mText3.setText(link_input);
 
+        /*//retrieving user input from NewOffer Activity
+        String address_input = Extra.getStringExtra("User_address_input");
+        Log.i(TAG, "address_input : "+address_input);
+        TextView mText4 = (TextView) findViewById(R.id.address_input);
+        mText4.setText(address_input);*/
+
 
     }
 
