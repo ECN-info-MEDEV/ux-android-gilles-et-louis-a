@@ -8,13 +8,13 @@
     tools:context=".JobOffer">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo_company"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="@string/amazon_logo"
-        android:src="@drawable/logo_amazon"
+        android:contentDescription="@string/logo_company"
+        android:src="@android:drawable/presence_invisible"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,7 +31,7 @@
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/logo_company"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/logo_company">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/logo_emplacement"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginTop="8dp"
@@ -73,15 +73,25 @@
                 app:tint="#000000" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/adress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/adress"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+                app:layout_constraintBottom_toBottomOf="@+id/logo_emplacement"
+                app:layout_constraintStart_toEndOf="@+id/logo_emplacement"
+                app:layout_constraintTop_toTopOf="@+id/logo_emplacement" />
+
+            <ImageView
+                android:id="@+id/logo_link"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/link_offer"
+                app:layout_constraintStart_toStartOf="@+id/text_poste"
+                app:layout_constraintTop_toBottomOf="@+id/logo_emplacement"
+                app:srcCompat="@drawable/logo_chain" />
 
             <TextView
                 android:id="@+id/link_input"
@@ -90,52 +100,53 @@
                 android:layout_marginStart="8dp"
                 android:text="@string/joblink"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
-                app:layout_constraintTop_toTopOf="@+id/imageView4" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/nbre_relations_linkedin"
-                android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toTopOf="@+id/imageView5" />
-
-            <TextView
-                android:id="@+id/textView35"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/de_vos_relations"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView8"
-                app:layout_constraintStart_toEndOf="@+id/textView8"
-                app:layout_constraintTop_toTopOf="@+id/textView8" />
+                app:layout_constraintBottom_toBottomOf="@+id/logo_link"
+                app:layout_constraintStart_toEndOf="@+id/logo_link"
+                app:layout_constraintTop_toTopOf="@+id/logo_link" />
 
             <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="8dp"
-                android:contentDescription="@string/link_offer"
-                app:layout_constraintStart_toStartOf="@+id/text_poste"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3"
-                app:srcCompat="@drawable/logo_chain" />
-
-            <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/logo_linkedin"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/linkedin_image"
                 app:layout_constraintStart_toStartOf="@+id/text_poste"
-                app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/logo_link"
                 app:srcCompat="@drawable/logo_linkedin" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/nbre_linkedin_relations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/nbre_relations_linkedin"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/logo_linkedin"
+                app:layout_constraintTop_toTopOf="@+id/logo_linkedin" />
+
+            <TextView
+                android:id="@+id/de_vos_relations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/de_vos_relations"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/nbre_linkedin_relations"
+                app:layout_constraintStart_toEndOf="@+id/nbre_linkedin_relations"
+                app:layout_constraintTop_toTopOf="@+id/nbre_linkedin_relations" />
+
+            <TextView
+                android:id="@+id/travaillent_ici"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/travaillent_ici"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/logo_linkedin"
+                app:layout_constraintStart_toEndOf="@+id/logo_linkedin"
+                app:layout_constraintTop_toBottomOf="@+id/de_vos_relations" />
+
+            <TextView
+                android:id="@+id/prochain_evenement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -143,17 +154,7 @@
                 android:text="@string/prochain_v_nement"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/chronologie"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/conditions" />
+                app:layout_constraintTop_toBottomOf="@+id/logo_linkedin" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/prochainevenement"
@@ -166,11 +167,11 @@
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/prochain_evenement"
                 tools:ignore="MissingConstraints">
 
                 <TextView
-                    android:id="@+id/textView16"
+                    android:id="@+id/date_prochain_evenement"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -181,6 +182,27 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/titre_prochain_eve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/titre_prochain_eve"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/date_prochain_evenement" />
+
+                <ImageView
+                    android:id="@+id/logo_cam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/camera_image"
+                    android:foregroundTint="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/date_prochain_evenement"
+                    app:layout_constraintTop_toBottomOf="@+id/date_prochain_evenement"
+                    app:srcCompat="@android:drawable/ic_menu_camera" />
+
+                <TextView
                     android:id="@+id/visio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -189,40 +211,323 @@
                     android:text="@string/visio"
                     android:textSize="13sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView6"
-                    app:layout_constraintStart_toStartOf="@+id/imageView6"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="@string/camera_image"
-                    android:foregroundTint="#000000"
-                    app:layout_constraintStart_toStartOf="@+id/textView16"
-                    app:layout_constraintTop_toBottomOf="@+id/textView16"
-                    app:srcCompat="@android:drawable/ic_menu_camera" />
+                    app:layout_constraintEnd_toEndOf="@+id/logo_cam"
+                    app:layout_constraintStart_toStartOf="@+id/logo_cam"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_cam" />
 
                 <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:text="@string/titre_prochain_eve"
-                    android:textSize="24sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView16" />
-
-                <TextView
-                    android:id="@+id/textView21"
+                    android:id="@+id/heure_prochain_eve"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:text="@string/heure_eve_pro"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView20" />
+                    app:layout_constraintEnd_toEndOf="@+id/titre_prochain_eve" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/descriptif"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/layout_border"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/prochainevenement"
+                app:layout_constraintTop_toBottomOf="@+id/prochainevenement"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/titre_descriptif_offre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/titre_descriptif_offre"
+                    android:textSize="28sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/description_offre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/description_offre"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titre_descriptif_offre" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/conditions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/layout_border"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/prochainevenement"
+                app:layout_constraintTop_toBottomOf="@+id/descriptif"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/conditions_de_l_offre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/conditions_de_l_offre"
+                    android:textSize="28sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/add_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/app_name"
+                    android:focusable="true"
+                    app:backgroundTint="#808080"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/ic_input_add"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <TextView
+                    android:id="@+id/salaire"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/salaire"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/add_condition"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/salaire_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/salaire_value"
+                    app:layout_constraintBottom_toBottomOf="@+id/salaire"
+                    app:layout_constraintStart_toEndOf="@+id/salaire"
+                    app:layout_constraintTop_toTopOf="@+id/salaire"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/k_an"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/k_an"
+                    app:layout_constraintBottom_toBottomOf="@+id/salaire"
+                    app:layout_constraintStart_toEndOf="@+id/salaire_value"
+                    app:layout_constraintTop_toTopOf="@+id/salaire"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/heures"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/heures"
+                    app:layout_constraintStart_toStartOf="@+id/salaire"
+                    app:layout_constraintTop_toBottomOf="@+id/salaire"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/nbre_heures"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nbre_heures"
+                    app:layout_constraintBottom_toBottomOf="@+id/heures"
+                    app:layout_constraintStart_toEndOf="@+id/heures"
+                    app:layout_constraintTop_toTopOf="@+id/heures"
+                    app:layout_constraintVertical_bias="0.964"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/par_semaine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/par_semaine"
+                    app:layout_constraintBottom_toBottomOf="@+id/heures"
+                    app:layout_constraintStart_toEndOf="@+id/nbre_heures"
+                    app:layout_constraintTop_toTopOf="@+id/heures"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/ce"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/ce"
+                    app:layout_constraintStart_toStartOf="@+id/salaire"
+                    app:layout_constraintTop_toBottomOf="@+id/heures"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/ce_boolean"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ce_boolean"
+                    app:layout_constraintBottom_toBottomOf="@+id/ce"
+                    app:layout_constraintStart_toEndOf="@+id/ce"
+                    app:layout_constraintTop_toTopOf="@+id/ce"
+                    app:layout_constraintVertical_bias="0.964"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/mutuelle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/mutuelle"
+                    app:layout_constraintStart_toStartOf="@+id/salaire"
+                    app:layout_constraintTop_toBottomOf="@+id/ce"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/mutuelle_boolean"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mutuelle_boolean"
+                    app:layout_constraintBottom_toBottomOf="@+id/mutuelle"
+                    app:layout_constraintStart_toEndOf="@+id/mutuelle"
+                    app:layout_constraintTop_toTopOf="@+id/mutuelle"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/rtt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/rtt"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/salaire"
+                    app:layout_constraintTop_toBottomOf="@+id/mutuelle"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/nbre_rtt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nbre_rtt"
+                    app:layout_constraintBottom_toBottomOf="@+id/rtt"
+                    app:layout_constraintStart_toEndOf="@+id/rtt"
+                    app:layout_constraintTop_toTopOf="@+id/rtt"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/jours_par_an"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jours_par_an"
+                    app:layout_constraintBottom_toBottomOf="@+id/rtt"
+                    app:layout_constraintStart_toEndOf="@+id/nbre_rtt"
+                    app:layout_constraintTop_toTopOf="@+id/rtt"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:ignore="NotSibling" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/chronologie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/chronologie"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/prochain_evenement"
+                app:layout_constraintTop_toBottomOf="@+id/conditions" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_chronologie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:focusable="true"
+                app:backgroundTint="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chronologie"
+                app:srcCompat="@android:drawable/ic_input_add" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chrono1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/layout_border"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_chronologie"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/date_chrono1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/date_chrono1"
+                    android:textSize="28sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/titre_chrono1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/titre_chrono1"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/logo_mail"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#000000"
+                    android:contentDescription="@string/mail_image"
+                    android:foregroundTint="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/date_chrono1"
+                    app:layout_constraintTop_toBottomOf="@+id/date_chrono1"
+                    app:srcCompat="@android:drawable/sym_action_email"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mail"
+                    app:layout_constraintStart_toStartOf="@+id/date_chrono1"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_mail" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -243,7 +548,7 @@
                 tools:ignore="MissingConstraints">
 
                 <TextView
-                    android:id="@+id/textView33"
+                    android:id="@+id/date_chrono2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -254,7 +559,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView34"
+                    android:id="@+id/titre_chrono2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -265,330 +570,25 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView36"
+                    android:id="@+id/tel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tel"
-                    app:layout_constraintStart_toStartOf="@+id/textView33"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+                    app:layout_constraintStart_toStartOf="@+id/date_chrono2"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_tel" />
 
                 <ImageView
-                    android:id="@+id/imageView8"
+                    android:id="@+id/logo_tel"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:contentDescription="@string/tel_image"
                     android:foregroundTint="#000000"
-                    app:layout_constraintStart_toStartOf="@+id/textView33"
-                    app:layout_constraintTop_toBottomOf="@+id/textView33"
+                    app:layout_constraintStart_toStartOf="@+id/date_chrono2"
+                    app:layout_constraintTop_toBottomOf="@+id/date_chrono2"
                     app:srcCompat="@android:drawable/ic_menu_call"
                     app:tint="#000000" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/chrono1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/layout_border"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/floatingActionButton2"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:id="@+id/textView32"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/date_chrono1"
-                    android:textSize="28sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView29"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="@string/titre_chrono1"
-                    android:textSize="24sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:backgroundTint="#000000"
-                    android:contentDescription="@string/mail_image"
-                    android:foregroundTint="#000000"
-                    app:layout_constraintStart_toStartOf="@+id/textView32"
-                    app:layout_constraintTop_toBottomOf="@+id/textView32"
-                    app:srcCompat="@android:drawable/sym_action_email"
-                    tools:ignore="ImageContrastCheck" />
-
-                <TextView
-                    android:id="@+id/textView30"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mail"
-                    app:layout_constraintStart_toStartOf="@+id/textView32"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView7" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/conditions"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/layout_border"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/prochainevenement"
-                app:layout_constraintTop_toBottomOf="@+id/descriptif"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/ce"
-                    app:layout_constraintStart_toStartOf="@+id/textView26"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/mutuelle"
-                    app:layout_constraintStart_toStartOf="@+id/textView26"
-                    app:layout_constraintTop_toBottomOf="@+id/textView9"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/rtt"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/textView26"
-                    app:layout_constraintTop_toBottomOf="@+id/textView13"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/heures"
-                    app:layout_constraintStart_toStartOf="@+id/textView26"
-                    app:layout_constraintTop_toBottomOf="@+id/textView26"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nbre_heures"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
-                    app:layout_constraintStart_toEndOf="@+id/textView2"
-                    app:layout_constraintTop_toTopOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.964"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView27"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/par_semaine"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
-                    app:layout_constraintStart_toEndOf="@+id/textView3"
-                    app:layout_constraintTop_toTopOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ce_boolean"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView9"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
-                    app:layout_constraintTop_toTopOf="@+id/textView9"
-                    app:layout_constraintVertical_bias="0.964"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mutuelle_boolean"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView13"
-                    app:layout_constraintStart_toEndOf="@+id/textView13"
-                    app:layout_constraintTop_toTopOf="@+id/textView13"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nb_rtt"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView17"
-                    app:layout_constraintStart_toEndOf="@+id/textView17"
-                    app:layout_constraintTop_toTopOf="@+id/textView17"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView31"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/jours_par_an"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView17"
-                    app:layout_constraintStart_toEndOf="@+id/textView18"
-                    app:layout_constraintTop_toTopOf="@+id/textView17"
-                    app:layout_constraintVertical_bias="1.0"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView25"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/conditions_de_l_offre"
-                    android:textSize="28sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView26"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/salaire"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/salaire_value"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView26"
-                    app:layout_constraintStart_toEndOf="@+id/textView26"
-                    app:layout_constraintTop_toTopOf="@+id/textView26"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/textView24"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/k_an"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView26"
-                    app:layout_constraintStart_toEndOf="@+id/textView"
-                    app:layout_constraintTop_toTopOf="@+id/textView26"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:ignore="NotSibling" />
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:clickable="true"
-                    android:contentDescription="@string/app_name"
-                    android:focusable="true"
-                    app:backgroundTint="#808080"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@android:drawable/ic_input_add"
-                    tools:ignore="DuplicateSpeakableTextCheck" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:clickable="true"
-                android:contentDescription="@string/app_name"
-                android:focusable="true"
-                app:backgroundTint="#808080"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView28"
-                app:srcCompat="@android:drawable/ic_input_add" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/descriptif"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/layout_border"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/prochainevenement"
-                app:layout_constraintTop_toBottomOf="@+id/prochainevenement"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:id="@+id/textView22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/descriptif_offre"
-                    android:textSize="28sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView23"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="@string/description_offre"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/textView37"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/travaillent_ici"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView35" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
