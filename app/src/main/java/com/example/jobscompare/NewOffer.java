@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,34 +22,55 @@ import java.util.List;
 public class NewOffer extends AppCompatActivity {
 
     private static final String TAG = "Activity-NewOffer";
+    String selectedOfferType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_offer);
 
+        setTitle("Ajouter une nouvelle offre");
+
+        //Sending radio buttons values to the job offer screen
+        RadioGroup radioGroup = findViewById(R.id.typeCandidatureRadio);
+
+        RadioButton candidature_spontanee = findViewById(R.id.candidature_spontanee);
+        RadioButton offre_d_emploi = findViewById(R.id.offre_d_emploi);
+        RadioButton approche_reseau = findViewById(R.id.approche_reseau);
+        RadioButton autre = findViewById(R.id.autre);
+
+        offre_d_emploi.setSelected(true);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if(i==R.id.candidature_spontanee){
+                    selectedOfferType = candidature_spontanee.getText().toString();
+                }else if(i==R.id.offre_d_emploi){
+                    selectedOfferType = offre_d_emploi.getText().toString();
+                }else if(i==R.id.approche_reseau) {
+                    selectedOfferType = approche_reseau.getText().toString();
+                }else{
+                    selectedOfferType = autre.getText().toString();
+                }
+            }
+        });
+
         Button mButton = (Button)findViewById(R.id.buttonValider);
         mButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                //getting user input using the id of the text input
-                EditText mEdit = (EditText) findViewById(R.id.entreprise_input);
-                String entreprise_name = mEdit.getText().toString();
 
-                //Sending the message
+                //Sending the message of radio buttons input
+                //Preparing the sendMessage to pass data to the JobOffer Activity
                 Intent sendMessage = new Intent(NewOffer.this,  JobOffer.class);
-                sendMessage.putExtra("User_entreprise_Input", entreprise_name);
-                Log.i(TAG, "entreprise_name : "+entreprise_name);
+                sendMessage.putExtra("type_canditature", selectedOfferType);
 
-
-                //TODO : create a function that gets the user input and sends the message
-
-                //TODO : add the address field in the NewOffer Activity
-
-                //the following block iterate through ids rather than copy-pasting the previous
+                //the following block iterate through ids rather than copy-pasting
                 //lines of code
+                //it could be improved by defining more simple functions
+                //for sending messages and making fields required
                 Resources r = getResources();
                 String name = getPackageName();
-                List<String> ids_name = Arrays.asList("poste_input", "link_input");//, "address_input");
+                List<String> ids_name = Arrays.asList("entreprise_input", "poste_input", "link_input", "address_input");
                 String name_placeholder;
                 for (String id_name : ids_name) {
                     //getting user input using the id of the text input
@@ -57,15 +79,29 @@ public class NewOffer extends AppCompatActivity {
                     Log.i(TAG, "id : "+r.getIdentifier(id_name, "id", name));
                     name_placeholder = mEdit2.getText().toString();
 
+                    //making the field required for the job title
+                    if (name_placeholder.length() == 0 && id_name == "entreprise_input"){
+                        mEdit2.setError("Merci d'entrer un nom d'entreprise'");
+                        return;
+                    }else if (name_placeholder.length() == 0 && id_name == "poste_input") {
+                        mEdit2.setError("Merci d'entrer un nom de poste");
+                        return;
+                    }else {
+                        //do something
+                    }
+
                     //Sending the message
                     sendMessage.putExtra("User_"+id_name, name_placeholder);
                     Log.i(TAG, "name_placeholder : "+name_placeholder);
 
                 }
-
+                //this sends all messages to the defined activity
                 startActivity(sendMessage);
             }
         });
+
+
+
     }
 
     public void displayToast(String message) {

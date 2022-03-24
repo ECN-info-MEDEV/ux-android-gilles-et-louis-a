@@ -41,9 +41,10 @@
         android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_company">
+        app:layout_constraintTop_toBottomOf="@+id/logo_company"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -61,6 +62,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/typeOffre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/typeoffre"
+                app:layout_constraintTop_toBottomOf="@+id/text_poste"
+                app:layout_constraintStart_toStartOf="@+id/text_poste"
+                tools:layout_editor_absoluteX="312dp" />
+
             <ImageView
                 android:id="@+id/logo_emplacement"
                 android:layout_width="32dp"
@@ -68,8 +78,8 @@
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/emplacement_image"
                 android:rotationX="-180"
-                app:layout_constraintStart_toStartOf="@+id/text_poste"
-                app:layout_constraintTop_toBottomOf="@+id/text_poste"
+                app:layout_constraintStart_toStartOf="@+id/typeOffre"
+                app:layout_constraintTop_toBottomOf="@+id/typeOffre"
                 app:srcCompat="?android:attr/textSelectHandle"
                 app:tint="#000000" />
 
